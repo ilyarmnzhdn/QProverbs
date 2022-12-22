@@ -13,10 +13,12 @@ class TableViewCell: UITableViewCell {
     
     @IBOutlet weak var imageProverbs: UIImageView!
     
+    @IBOutlet weak var descriptionProverbs: UILabel!
+    
     func inputInformationIntoTheCell(proverb: Proverb) {
         self.label.text = proverb.name
+        self.descriptionProverbs.text = proverb.translate
         self.imageProverbs.image = UIImage(named: proverb.image)
-        
     }
     
 }

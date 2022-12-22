@@ -67,8 +67,8 @@
 			children = (
 				94684812295474110085B76A /* AppDelegate.swift */,
 				94684814295474110085B76A /* SceneDelegate.swift */,
-				9468483029547CA10085B76A /* ViewController.swift */,
 				9468482A295474480085B76A /* Proverbs.swift */,
+				9468483029547CA10085B76A /* ViewController.swift */,
 				94684829295474480085B76A /* TableViewCell.swift */,
 				94684828295474480085B76A /* TableViewController.swift */,
 				94684826295474330085B76A /* Main.storyboard */,

@@ -30,6 +30,7 @@ class TableViewController: UITableViewController {
 
         self.title = "Пословицы"
         self.navigationItem.leftBarButtonItem = self.editButtonItem
+        
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -49,7 +50,10 @@ class TableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showImage" {
             let newSegue = segue.destination as! ViewController
-//            newSegue.inputImage.image = UIImage(named: proverb)
+            let newSender = sender as! TableViewCell
+            newSegue.newInputImage = newSender.imageProverbs
+            newSegue.newInputName = newSender.label.text
+            newSegue.newInputDescription = newSender.descriptionProverbs.text
         }
     }
     

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PFn-lf-jc9">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Table View Controller-->
+        <scene sceneID="miS-5W-mhN">
+            <objects>
+                <tableViewController id="M1q-BO-EW9" customClass="TableViewController" customModule="QProverbs" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="jik-sn-b5C">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TVCell" rowHeight="70" id="etn-pk-Yv1" customClass="TableViewCell" customModule="QProverbs" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="50" width="375" height="70"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="etn-pk-Yv1" id="xyL-UF-4Oh">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chelovek-pauk-cherez-vselennie-1920x1080-chelovek-pauk-cherez-vselennie-20634" translatesAutoresizingMaskIntoConstraints="NO" id="G9p-kx-2vP">
+                                            <rect key="frame" x="16" y="8" width="56" height="54"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="56" id="eQm-3g-qoq"/>
+                                                <constraint firstAttribute="height" constant="56" id="mZf-y1-LRe"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uj6-Uw-Qbp">
+                                            <rect key="frame" x="88" y="8" width="271" height="54"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="54" id="S7R-Iy-SxJ"/>
+                                                <constraint firstAttribute="width" constant="267" id="pnG-cr-x2E"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="G9p-kx-2vP" firstAttribute="leading" secondItem="xyL-UF-4Oh" secondAttribute="leading" constant="16" id="KGK-uQ-qga"/>
+                                        <constraint firstItem="uj6-Uw-Qbp" firstAttribute="leading" secondItem="G9p-kx-2vP" secondAttribute="trailing" constant="16" id="OQh-mU-V1s"/>
+                                        <constraint firstItem="uj6-Uw-Qbp" firstAttribute="leading" secondItem="G9p-kx-2vP" secondAttribute="trailing" constant="16" id="UUa-Hw-cQs"/>
+                                        <constraint firstItem="uj6-Uw-Qbp" firstAttribute="centerY" secondItem="xyL-UF-4Oh" secondAttribute="centerY" id="V2z-G4-7hK"/>
+                                        <constraint firstAttribute="bottom" secondItem="G9p-kx-2vP" secondAttribute="bottom" constant="8" id="YaA-tr-Yeh"/>
+                                        <constraint firstAttribute="trailing" secondItem="uj6-Uw-Qbp" secondAttribute="trailing" constant="16" id="aGG-C5-5au"/>
+                                        <constraint firstItem="G9p-kx-2vP" firstAttribute="top" secondItem="xyL-UF-4Oh" secondAttribute="top" constant="8" id="feK-pI-jHN"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="imageProverbs" destination="G9p-kx-2vP" id="0gs-gk-f1i"/>
+                                    <outlet property="label" destination="uj6-Uw-Qbp" id="E9N-Kg-SUQ"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="M1q-BO-EW9" id="gY3-Tc-6ag"/>
+                            <outlet property="delegate" destination="M1q-BO-EW9" id="bek-PD-nTu"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="r6L-de-dzJ"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z73-bC-3d5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="687.20000000000005" y="-58.374384236453203"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="5Hg-en-fnS">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PFn-lf-jc9" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="UMH-io-W1u">
+                        <rect key="frame" x="0.0" y="47" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="M1q-BO-EW9" kind="relationship" relationship="rootViewController" id="aCO-6S-8fG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4FK-cW-JPS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-255.19999999999999" y="-58.374384236453203"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chelovek-pauk-cherez-vselennie-1920x1080-chelovek-pauk-cherez-vselennie-20634" width="1920" height="1080"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

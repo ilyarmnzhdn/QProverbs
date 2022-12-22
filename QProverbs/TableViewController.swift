@@ -45,5 +45,15 @@ class TableViewController: UITableViewController {
 
         return cell
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showImage" {
+            let newSegue = segue.destination as! ViewController
+//            newSegue.inputImage.image = UIImage(named: proverb)
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
+    }
 
 }

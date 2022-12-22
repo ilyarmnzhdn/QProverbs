@@ -23,7 +23,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chelovek-pauk-cherez-vselennie-1920x1080-chelovek-pauk-cherez-vselennie-20634" translatesAutoresizingMaskIntoConstraints="NO" id="G9p-kx-2vP">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rock" translatesAutoresizingMaskIntoConstraints="NO" id="G9p-kx-2vP">
                                             <rect key="frame" x="16" y="8" width="56" height="54"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="56" id="eQm-3g-qoq"/>
@@ -88,7 +88,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="chelovek-pauk-cherez-vselennie-1920x1080-chelovek-pauk-cherez-vselennie-20634" width="1920" height="1080"/>
+        <image name="rock" width="1740" height="1076"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

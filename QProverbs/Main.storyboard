@@ -111,6 +111,17 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v79-cl-lEl">
+                                <rect key="frame" x="113.66666666666669" y="583.66666666666663" width="148" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="148" id="oVg-c0-ZiO"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" image="square.and.arrow.up" catalog="system" title=" Поделиться"/>
+                                <connections>
+                                    <action selector="shareAction:" destination="upJ-Zh-CnB" eventType="touchUpInside" id="hPv-Kl-T5R"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wNf-zx-Cgy"/>
                         <color key="backgroundColor" systemColor="systemGray5Color"/>
@@ -118,7 +129,9 @@
                             <constraint firstItem="yzh-aG-6kU" firstAttribute="top" secondItem="vli-2E-PBo" secondAttribute="bottom" constant="24" id="Ax4-Fx-KzE"/>
                             <constraint firstItem="G08-RT-kAV" firstAttribute="centerX" secondItem="wNf-zx-Cgy" secondAttribute="centerX" id="Iya-XP-BIw"/>
                             <constraint firstItem="vli-2E-PBo" firstAttribute="top" secondItem="wNf-zx-Cgy" secondAttribute="top" constant="64" id="YN0-if-UTy"/>
+                            <constraint firstItem="v79-cl-lEl" firstAttribute="centerX" secondItem="wNf-zx-Cgy" secondAttribute="centerX" id="ZvK-Fa-8cY"/>
                             <constraint firstItem="vli-2E-PBo" firstAttribute="centerX" secondItem="wNf-zx-Cgy" secondAttribute="centerX" id="e57-kK-sTO"/>
+                            <constraint firstItem="v79-cl-lEl" firstAttribute="top" secondItem="G08-RT-kAV" secondAttribute="bottom" constant="48" id="o5N-I7-0Pf"/>
                             <constraint firstItem="yzh-aG-6kU" firstAttribute="centerX" secondItem="wNf-zx-Cgy" secondAttribute="centerX" id="r6C-qV-iTB"/>
                             <constraint firstItem="G08-RT-kAV" firstAttribute="top" secondItem="yzh-aG-6kU" secondAttribute="bottom" constant="16" id="rzl-vB-NlD"/>
                         </constraints>
@@ -155,6 +168,7 @@
     </scenes>
     <resources>
         <image name="rock" width="1740" height="1076"/>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -30,7 +30,6 @@ class TableViewController: UITableViewController {
 
         self.title = "Пословицы"
         self.navigationItem.leftBarButtonItem = self.editButtonItem
-        
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -54,6 +53,13 @@ class TableViewController: UITableViewController {
             newSegue.newInputImage = newSender.imageProverbs
             newSegue.newInputName = newSender.label.text
             newSegue.newInputDescription = newSender.descriptionProverbs.text
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            proverbs.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
     

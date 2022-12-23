@@ -22,11 +22,23 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        inputName.text = newInputName
-        inputDescription.text = newInputDescription
-        inputImage.image = newInputImage?.image
+        guard let proverbName = newInputName else { return }
+        guard let proverbDescription = newInputDescription else { return }
+        guard let proverbImage = newInputImage else { return }
+        
+        inputName.text = proverbName
+        inputDescription.text = proverbDescription
+        inputImage.image = proverbImage.image
     }
     
-
+    @IBAction func shareAction(_ sender: UIButton) {
+        
+        let shareController = UIActivityViewController(activityItems: [inputName.text!, inputDescription.text!, inputImage.image!], applicationActivities: nil)
+        
+        present(shareController, animated: true)
+        
+        
+    }
+    
 
 }

@@ -9,6 +9,8 @@ import UIKit
 
 class TableViewController: UITableViewController {
 
+    let searchController = UISearchController()
+    
     var proverbs = [
         Proverb(name: "Қазарсың арықты, көрерсің жарықты", translate: "Арык прокопашь, счастья свет узнаешь", image: "light"),
         Proverb(name: "Түйесі жоқ ауылға тайлақ атан көрінеді", translate: "Аулу, что верблюда не имеет, и верблюжонок — верблюдом покажется", image: "camel"),
@@ -27,9 +29,13 @@ class TableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.title = "Пословицы"
+        
+        searchController.searchResultsUpdater = self
+        navigationItem.searchController = searchController
+        
         self.navigationItem.leftBarButtonItem = self.editButtonItem
+        
+       
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -66,4 +72,10 @@ class TableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
     }
 
+}
+
+extension TableViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        
+    }
 }
